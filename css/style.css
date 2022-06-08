@@ -1,0 +1,124 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(#505050, #171717);
+  font-family: 'Poppins';
+  font-weight: 400;
+}
+
+.primeiro {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.segundo {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 20px 50px;
+  font-size: 1.25rem;
+  position: relative;
+  margin: 2rem;
+}
+
+.btn-1 {
+  background: grey;
+  color: white;
+  border-radius: 30px;
+  position: absolute;
+  left: 35rem;
+  bottom: 15rem;
+  transition: transform 0.4 ease;
+}
+
+.btn-2 {
+  color: black;
+}
+
+.btn-1::after, .btn-1::before {
+  content: '';
+  position: absolute;
+  opacity: 0.4;
+  background: grey;
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+.btn-1:hover {
+  transform: translate(-12px, -12px);
+}
+
+.btn-1:hover::after {
+  transform: translate(6px, 6px);
+}
+
+.btn-1:hover::before {
+  transform: translate(12px, 12px);
+}
+
+.btn-2::after, .btn-2::before {
+  border: 3px solid black;
+  content: '';
+  position: absolute;
+  height: calc(100% - 6px);
+  width: calc(100% - 6px);
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: transform 0.4s ease;
+}
+
+.btn-2:hover::after {
+  transform: translate(-5px, -5px);
+}
+
+.btn-2:hover::before {
+  transform: translate(5px, 5px);
+}
+
+.btn-3 {
+  position: absolute;
+  right: 35rem;
+  top: 15rem;
+  overflow: hidden;
+  color: white;
+  border-radius: 30px;
+  box-shadow: 0 0 0 0 rgba(143, 64, 248, 0.4), 0 0 0 0 rgba(39, 200, 255, 0);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.btn-3::after {
+  content: '';
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: -50px;
+  left: -100px;
+  background-color: black;
+  background-image: linear-gradient(225deg, #27d86c 0%, #26caf8 50%, #c625d0);
+  z-index: -1;
+  transition: transform 0.4s ease;
+}
+
+.btn-3:hover{
+  transform: translate(0, -6px);
+  box-shadow: 10px -10px 25px 0 rgba(143, 64, 248, 0.4), -10px 10px 25px 0 rgba(39, 200, 255, 0);
+}
+
+.btn-3:hover::after{
+  transform: rotate(150deg);
+}
